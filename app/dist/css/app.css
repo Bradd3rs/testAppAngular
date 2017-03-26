@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Sansita");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sansita', sans-serif;
+}
+
+.container {
+  position: fixed;
+  margin: auto;
+  padding: 10px;
+  left: 0;
+  right: 0;
+}
+
+.container.status {
+  bottom: 48px;
+  height: 35px;
+  padding: 5px 10px;
+  -webkit-box-shadow: -2px -3px 19px -6px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: -2px -3px 19px -6px rgba(0, 0, 0, 0.62);
+  box-shadow: -2px -3px 19px -6px rgba(0, 0, 0, 0.62);
+}
+
+.container.view {
+  top: 30px;
+  bottom: 90px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container.mainMenu {
+  padding: 0;
+  border-top: 2px solid black;
+}
+
+.disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.header-stats {
+  margin: auto;
+}
+
+header,
+footer {
+  position: fixed;
+  left: 0px;
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+header {
+  top: 0px;
+  padding: 5px;
+  height: 30px;
+  -webkit-box-shadow: -1px 5px 15px -6px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: -1px 5px 15px -6px rgba(0, 0, 0, 0.62);
+  box-shadow: -1px 5px 15px -6px rgba(0, 0, 0, 0.62);
+}
+
+header div {
+  margin: auto;
+  text-align: center;
+}
+
+header ul {
+  margin: auto;
+  width: 90%;
+  padding: 0;
+}
+
+header ul li {
+  padding: 3px;
+  display: inline;
+}
+
+footer {
+  bottom: 0px;
+  padding: 7.5px;
+  background: white;
+}
+
+footer .button {
+  width: 23%;
+  padding: 5px 2.5px;
+  display: inline-block;
+}
+.button {
+  padding: 0px 8px 2px;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin: 0 2px;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.button:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.inventory ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inventory ul li {
+  display: block;
+  padding: 3px 2px 11px;
+  margin: 2px 0;
+  border-bottom: 1px solid black;
+}
+
+.inventory ul li .inventory-action {
+  float: right;
+}
+.map .locations {
+  padding: 0;
+  margin: 0;
+}
+
+.map .locations li {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin: 5px;
+  width: 45%;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+}

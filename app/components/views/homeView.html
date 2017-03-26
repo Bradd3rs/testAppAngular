@@ -1,0 +1,15 @@
+ <div class="container view">
+    <div ng-controller="playerCtrl as controller"
+        ng-cloak>
+        <div ng-class="{ 'disabled' : controller.player.eating }"
+             ng-click="controller.eat()"
+             class="button">
+                Eat
+        </div>
+        <div ng-class="{ 'disabled' : controller.player.foraging }"
+             ng-click="controller.forage()"
+             class="button">
+             Forage
+        </div>
+    </div>
+ </div>

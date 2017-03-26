@@ -1,0 +1,17 @@
+.inventory {
+
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            display: block;
+            padding: 3px 2px 11px;
+            margin: 2px 0;
+            border-bottom: 1px solid black;
+
+            .inventory-action {
+                float: right;
+            }
+        } 
+    }
+}

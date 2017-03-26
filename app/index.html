@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="dist/css/app.css">
+  <base href="/">
+</head>
+<body>
+
+<div class="main-container">
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+<header>
+  <div ng-controller="statsCtrl as controller"
+       ng-cloak>
+    <ul>
+      <li>HP: {{controller.player.health}}/{{controller.player.maxHealth}}</li>
+      <li>Hunger: {{controller.player.hunger}}/100</li>
+    </ul>
+  </div>
+</header>
+<div ng-view></div>
+  <div class="container status">
+    <div ng-controller="playerCtrl as controller"
+        ng-cloak>
+      
+      <strong>{{controller.player.status}}</strong>
+      <span>{{controller.player.level}}</span>
+    </div>
+    
+  </div>
+  
+
+  <footer>
+        <a href="#/" class="button">H</a>
+        <a href="#/inventory" class="button">H</a>
+        <a href="#/map" class="button">H</a>
+        <a href="#/test" class="button">H</a>
+  </footer>
+</div>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="resources/bower/angular/angular.js"></script>
+  <script src="resources/bower/angular-route/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="components/controllers/inventory.controller.js"></script>
+  <script src="components/controllers/stats.controller.js"></script>
+  <script src="components/controllers/home.controller.js"></script>
+  <script src="components/controllers/map.controller.js"></script>
+  <script src="components/controllers/test.controller.js"></script>
+  <script src="components/controllers/player.controller.js"></script>
+  <script src="components/factories/player.factory.js"></script>
+  <script src="components/factories/roll.factory.js"></script>
+  <script src="components/factories/inventory.factory.js"></script>
+  <script src="components/factories/item.factory.js"></script>
+
+</body>
+</html>

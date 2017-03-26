@@ -1,0 +1,23 @@
+ <div class="container view">
+    <div ng-controller="playerCtrl as controller"
+		 ng-cloak
+		 class="map">
+		<ul class="locations">
+			<li ng-class="{ 'disabled' : controller.player.foraging }"
+				ng-click="controller.forage()"
+				class="button">Desert</li>
+			<li ng-if="controller.player.level >= 2"
+				ng-class="{ 'disabled' : controller.player.foraging }"
+				ng-click="controller.forage()"
+				class="button">Jungle</li>
+			<li ng-if="controller.player.level >= 3"
+				ng-class="{ 'disabled' : controller.player.foraging }"
+				ng-click="controller.forage()"
+				class="button">River</li>
+			<li ng-if="controller.player.level >= 4"
+				ng-class="{ 'disabled' : controller.player.foraging }"
+				ng-click="controller.forage()"
+				class="button">Cave</li>
+		</ul>
+    </div>
+ </div>

@@ -1,0 +1,21 @@
+<div class="container view">
+    <div ng-controller="inventoryCtrl as controller"
+         ng-cloak>
+        <div class="inventory">
+            <ul>
+                <li ng-repeat="item in controller.inventory">{{ item.itemName }}
+                    <span>
+                        <div class="button inventory-action">Drop</div>
+                    </span>
+                    <span ng-switch="item.consumeable">
+                        <div ng-click="playerCtrl.eat()"
+                             ng-switch-when="true"
+                             class="button inventory-action">Eat</div>
+                        <div ng-switch-when="false"
+                             class="button inventory-action">Equip</div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
